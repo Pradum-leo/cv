@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CV of Pradum Jaiprakash Chauhan, Data Scientist and Machine Learning Engineer with Max Planck research experience and applied data experience at Siemens Energy and Mercedes-Benz." />
+  <title>Pradum Jaiprakash Chauhan | CV</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --paper: #ffffff;
+      --text: #111827;
+      --muted: #566273;
+      --line: #dde6f0;
+      --blue: #155da8;
+      --blue-soft: #edf5ff;
+      --green: #137a56;
+      --green-soft: #edf8f2;
+      --gold: #a96b18;
+      --gold-soft: #fff7e8;
+      --shadow: 0 18px 42px rgba(18, 38, 63, 0.07);
+      --radius: 22px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.62;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(120deg, rgba(21, 93, 168, 0.08), transparent 34%),
+        linear-gradient(300deg, rgba(19, 122, 86, 0.07), transparent 32%);
+      z-index: -1;
+    }
+
+    a { color: var(--blue); text-decoration: none; font-weight: 700; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { width: min(var(--max), calc(100% - 36px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(246, 248, 251, 0.9);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(221, 230, 240, 0.9);
+    }
+
+    .nav {
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
+      padding: 14px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand { font-weight: 850; letter-spacing: -0.02em; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.94rem; }
+
+    header { padding: 54px 0 28px; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: clamp(28px, 4.5vw, 50px);
+      border-top: 5px solid var(--blue);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 8px;
+      font-size: clamp(2.45rem, 5vw, 4.9rem);
+      line-height: 0.96;
+      letter-spacing: -0.075em;
+    }
+
+    .title {
+      font-size: clamp(1.15rem, 2vw, 1.38rem);
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .summary { max-width: 790px; font-size: 1.04rem; margin: 0; }
+
+    .buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 15px;
+      border-radius: 13px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
+      font-weight: 800;
+    }
+    .btn.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
+    .btn:hover { transform: translateY(-1px); text-decoration: none; }
+
+    .quick {
+      padding: 22px;
+      display: grid;
+      gap: 13px;
+      align-content: start;
+    }
+
+    .quick-card {
+      border: 1px solid var(--line);
+      background: #fbfdff;
+      border-radius: 17px;
+      padding: 15px;
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      color: var(--blue);
+      background: var(--blue-soft);
+    }
+    .icon.green { color: var(--green); background: var(--green-soft); }
+    .icon.gold { color: var(--gold); background: var(--gold-soft); }
+    .quick-card strong { display: block; margin-bottom: 3px; }
+    .quick-card span { color: var(--muted); }
+
+    section { padding: 17px 0; }
+    .section {
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      padding-bottom: 11px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 { margin: 0; font-size: clamp(1.55rem, 2.7vw, 2.35rem); line-height: 1.08; letter-spacing: -0.055em; }
+    .section-note { margin: 0; color: var(--muted); max-width: 610px; }
+    h3 { margin: 0 0 7px; font-size: 1.08rem; letter-spacing: -0.02em; }
+    p { margin: 0 0 10px; }
+    ul { margin: 9px 0 0; padding-left: 20px; }
+    li { margin: 5px 0; }
+
+    .focus-box {
+      border: 1px solid #cfe0f2;
+      border-left: 5px solid var(--blue);
+      border-radius: 18px;
+      padding: 20px;
+      background: linear-gradient(180deg, #ffffff, #f7fbff);
+    }
+
+    .focus-box .question {
+      margin-top: 12px;
+      padding: 14px;
+      border-radius: 14px;
+      background: var(--blue-soft);
+      color: #163b67;
+      font-weight: 750;
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag {
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: #3d4a59;
+      font-weight: 750;
+      font-size: 0.86rem;
+    }
+
+    .timeline { display: grid; gap: 14px; }
+    .entry {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--blue);
+      border-radius: 16px;
+      background: #fff;
+    }
+    .entry.green { border-left-color: var(--green); }
+    .entry.gold { border-left-color: var(--gold); }
+    .topline { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 3px; }
+    .role { font-weight: 850; }
+    .date { color: var(--muted); font-weight: 700; }
+    .location { color: var(--muted); margin-bottom: 8px; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      padding: 18px;
+      background: #fbfdff;
+    }
+
+    .featured {
+      border-left: 5px solid var(--green);
+      background: linear-gradient(180deg, #ffffff, #f5fcf8);
+      margin-bottom: 16px;
+    }
+
+    .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .skill-card { border: 1px solid var(--line); border-radius: 16px; padding: 16px; background: #fbfdff; }
+    .skill-card p { margin: 0; }
+
+    .ref-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .ref-card { border: 1px solid var(--line); border-radius: 16px; padding: 16px; background: #fbfdff; }
+
+    footer { padding: 28px 0 56px; color: var(--muted); font-size: 0.95rem; }
+
+    @media (max-width: 900px) {
+      .hero, .grid-2, .grid-3, .skills, .ref-grid { grid-template-columns: 1fr; }
+      .nav { flex-direction: column; align-items: flex-start; }
+      .section-head { flex-direction: column; align-items: flex-start; }
+      header { padding-top: 34px; }
+    }
+
+    @media print {
+      .topbar, .buttons { display: none; }
+      body { background: #fff; }
+      body::before { display: none; }
+      .panel, .section { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <nav class="nav">
+      <div class="brand">Pradum Jaiprakash Chauhan</div>
+      <div class="nav-links">
+        <a href="#focus">Research focus</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Selected work</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#references">References</a>
+      </div>
+    </nav>
+  </div>
+
+  <main class="wrap">
+    <header>
+      <div class="hero">
+        <div class="panel hero-main">
+          <span class="eyebrow">Curriculum Vitae</span>
+          <h1>Pradum Jaiprakash Chauhan</h1>
+          <div class="title">Data Scientist and Machine Learning Engineer</div>
+          <p class="summary">Data Science graduate with research experience at the Max Planck Institute and applied data experience at Siemens Energy and Mercedes-Benz. My work combines machine learning, scientific time-series data, data engineering, dashboards, and reliable outputs for technical and non-technical teams.</p>
+          <div class="buttons">
+            <a class="btn primary" href="Pradum_Chauhan_CV.pdf" target="_blank" rel="noopener">PDF CV</a>
+            <a class="btn" href="mailto:chauhanpradum1681@gmail.com">Email</a>
+            <a class="btn" href="https://github.com/mrpradum" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/pradum-chauhan/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://www.mpikg.mpg.de/staff-members/137858" target="_blank" rel="noopener">MPIKG profile</a>
+          </div>
+        </div>
+
+        <aside class="panel quick">
+          <div class="quick-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M6 19V8l6-4 6 4v11"/><path d="M9 19v-5h6v5"/></svg></div>
+            <div><strong>Current affiliation</strong><span>Siemens Energy, Berlin</span></div>
+          </div>
+          <div class="quick-card">
+            <div class="icon green"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 16l3-4 3 2 6-8"/></svg></div>
+            <div><strong>Research background</strong><span>Max Planck Institute of Colloids and Interfaces</span></div>
+          </div>
+          <div class="quick-card">
+            <div class="icon gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h5M8 17h7"/></svg></div>
+            <div><strong>Graduated</strong><span>M.Sc. Data Science, January 2026</span></div>
+          </div>
+          <div class="quick-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 5-3 8-7 10-4-2-7-5-7-10V6l7-4z"/><path d="M9 12l2 2 4-5"/></svg></div>
+            <div><strong>Visa and work status</strong><span>Valid German residence and work permit</span></div>
+          </div>
+          <div class="quick-card">
+            <div class="icon green"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="8" r="2"/><circle cx="19" cy="8" r="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M8.1 9.2l2 1.2M15.9 10.4l-2-1.2M9 16.5l1.8-1.8M15 14.7l-1.8 1.8"/></svg></div>
+            <div><strong>PhD focus</strong><span>Autonomous agents and memory</span></div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section id="focus">
+      <div class="section">
+        <div class="section-head">
+          <h2>Research focus</h2>
+          <p class="section-note">The direction I want to study during a PhD.</p>
+        </div>
+        <div class="focus-box">
+          <h3>Autonomous agents and memory</h3>
+          <p>I want to study how LLM-based agents build, retrieve, update, forget, and expose long-term memory when they work over documents, code, scientific data, and knowledge bases. This connects directly to my interest in local-first AI memory systems using LLMs, embeddings, RAG, vector search, and memory layers.</p>
+          <div class="question">Concrete question: How can memory in autonomous agents remain reliable, inspectable, private, and controllable over long-term interaction?</div>
+          <div class="tags">
+            <span class="tag">Autonomous agents</span>
+            <span class="tag">Long-term memory</span>
+            <span class="tag">LLMs</span>
+            <span class="tag">RAG</span>
+            <span class="tag">Embeddings</span>
+            <span class="tag">Vector search</span>
+            <span class="tag">Memory auditability</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section">
+        <div class="section-head">
+          <h2>Experience</h2>
+          <p class="section-note">Research and applied data work across academic and industrial settings.</p>
+        </div>
+        <div class="timeline">
+          <article class="entry green">
+            <div class="topline"><div class="role">Max Planck Institute of Colloids and Interfaces - Guest Scientist and M.Sc. Thesis Researcher</div><div class="date">Sep 2024 to Mar 2026</div></div>
+            <div class="location">Potsdam, Germany</div>
+            <ul>
+              <li>Developed a two-stage machine learning pipeline for imputation and prediction of malaria mosquito count time series.</li>
+              <li>Combined MICE with XGBoost using Poisson loss for incomplete real-world count data.</li>
+              <li>Evaluated missing-data reconstruction using masked known values, leakage-aware validation, leave-one-out testing, and residual analysis.</li>
+              <li>Engineered environmental predictors from temperature, humidity, dew point, water temperature, and precipitation data.</li>
+              <li>Ran reproducible experiments on an HPC cluster with Slurm and documented methods for interdisciplinary researchers.</li>
+            </ul>
+          </article>
+          <article class="entry">
+            <div class="topline"><div class="role">Siemens Energy - Data Engineer and Data Analyst</div><div class="date">Nov 2025 to Present</div></div>
+            <div class="location">Berlin, Germany</div>
+            <ul>
+              <li>Build Snowflake and Power BI reporting solutions for operational data.</li>
+              <li>Transform source tables into structured KPI views used by internal business teams.</li>
+              <li>Design SQL-based data models, joins, aggregations, KPI definitions, and reporting logic.</li>
+              <li>Support metric clarity, dashboard usability, data consistency, and analytics adoption.</li>
+            </ul>
+          </article>
+          <article class="entry gold">
+            <div class="topline"><div class="role">Mercedes-Benz Ludwigsfelde GmbH - Data and Digitalization</div><div class="date">Aug 2022 to Sep 2024</div></div>
+            <div class="location">Germany</div>
+            <ul>
+              <li>Owned Databricks-based data flows for plant analytics use cases.</li>
+              <li>Improved operational data quality from 95% to 100% for GenAI use cases and downstream analytics.</li>
+              <li>Built Power BI dashboards for plant KPIs and operational performance monitoring.</li>
+              <li>Worked with data scientists, IT, and cross-functional teams to translate operational requirements into analytics-ready datasets.</li>
+              <li>Owned and built internal digital tools with MS PowerApps and custom components, supporting process standardisation, reporting efficiency, and adoption of digital workflows.</li>
+              <li>Contributed to GenAI and technology trend initiatives by preparing data foundations, prototypes, and presentations for analytics and digitalization topics.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="section">
+        <div class="section-head">
+          <h2>Selected work</h2>
+          <p class="section-note">Main thesis work first, followed by related AI and ML projects.</p>
+        </div>
+        <article class="card featured">
+          <h3>M.Sc. Thesis: Time-Series Imputation for Malaria Mosquito Counts</h3>
+          <p>Built a predictive modelling pipeline for incomplete count time series using MICE and XGBoost with Poisson loss. The work combined scientific data preparation, time-aligned feature engineering, leakage-aware validation, and reproducible HPC experiments.</p>
+          <a href="https://github.com/mrpradum/Two_Stage_Pipeline_Missing_Data_Thesis" target="_blank" rel="noopener">GitHub project</a>
+        </article>
+        <div class="grid-2">
+          <article class="card">
+            <h3>BrainLLM / Subconscious</h3>
+            <p>Independent project concept for a local-first AI memory layer using LLMs, embeddings, RAG, vector search, and possibly a knowledge graph to map files, folders, documents, and user context for retrieval and reasoning. The research angle is memory reliability, privacy, auditability, and user control.</p>
+          </article>
+          <article class="card">
+            <h3>Sign Language Gesture Recognition</h3>
+            <p>Transfer-learning project using TensorFlow/Keras and Bayesian hyperparameter optimisation. Co-authored a peer-reviewed publication based on the work.</p>
+            <a href="https://www.researchgate.net/publication/364336265_Sign_Language_Gesture_Recognition_using_Bayesian_Optimization_and_Transfer_Learning" target="_blank" rel="noopener">Article</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p class="section-note">Core tools and methods behind the research and engineering work.</p>
+        </div>
+        <div class="skills">
+          <div class="skill-card"><h3>Machine learning</h3><p>Time-series modelling, count-data modelling, missing-data imputation, feature engineering, model validation, residual analysis, scikit-learn, XGBoost, PyTorch, TensorFlow.</p></div>
+          <div class="skill-card"><h3>LLM and AI engineering</h3><p>LLMs, RAG, embeddings, vector search, prompt engineering, retrieval evaluation, agent memory, local-first AI workflows.</p></div>
+          <div class="skill-card"><h3>Data engineering</h3><p>Python, SQL, Snowflake, Databricks, AWS, data modelling, joins, aggregations, analytics-ready datasets.</p></div>
+          <div class="skill-card"><h3>Reproducibility and analytics</h3><p>Git, Docker, Slurm/HPC, Power BI, Tableau, KPI logic, dashboard design, stakeholder communication.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section">
+        <div class="section-head">
+          <h2>Education</h2>
+          <p class="section-note">Formal training in data science and applied computing.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>M.Sc. Data Science - University of Potsdam</h3>
+            <p><strong>Graduated:</strong> January 2026</p>
+            <p><strong>Thesis:</strong> Imputation of Missing Data in Time Series of Malaria Mosquito Counts</p>
+            <p><strong>Thesis institute:</strong> Max Planck Institute of Colloids and Interfaces</p>
+            <p><strong>Thesis grade:</strong> 1.4</p>
+          </div>
+          <div class="card">
+            <h3>B.Sc. Information Technology - University of Mumbai</h3>
+            <p><strong>Graduated:</strong> June 2021</p>
+            <p><strong>Grade:</strong> 1.3</p>
+            <p>Foundation in programming, databases, software development, statistics, and applied computing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="references">
+      <div class="section">
+        <div class="section-head">
+          <h2>References</h2>
+          <p class="section-note">Research and professional references.</p>
+        </div>
+        <div class="ref-grid">
+          <div class="ref-card">
+            <h3>Research references</h3>
+            <p><strong>Dr. Angelo Valleriani</strong><br>Max Planck Institute of Colloids and Interfaces<br>Thesis Supervisor<br><a href="mailto:angelo.valleriani@mpikg.mpg.de">angelo.valleriani@mpikg.mpg.de</a></p>
+            <p><strong>Annice Bowen</strong><br>Max Planck Institute of Colloids and Interfaces<br>Thesis Supervisor<br><a href="mailto:annice.bowen@mpikg.mpg.de">annice.bowen@mpikg.mpg.de</a></p>
+          </div>
+          <div class="ref-card">
+            <h3>Professional reference</h3>
+            <p><strong>Michel Ratsch Heitmann</strong><br>Mercedes-Benz Ludwigsfelde GmbH<br>Team Lead Digitalization IT MB Vans<br><a href="mailto:michel.ratsch-heitmann@mercedes-benz.com">michel.ratsch-heitmann@mercedes-benz.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2026 Pradum Jaiprakash Chauhan</footer>
+  </main>
+</body>
+</html>
